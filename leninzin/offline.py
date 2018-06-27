@@ -44,6 +44,7 @@ def publicKey(privatekey): # Private Key -> Public Key
 
 def main():
         f = open("btcadresses.txt", 'r')
+        print(f)
         x = [i[:-1] for i in f]
         n = 0
         while True:
