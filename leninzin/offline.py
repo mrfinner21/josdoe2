@@ -44,18 +44,17 @@ def publicKey(privatekey): # Private Key -> Public Key
 
 def main():
         f = open("btcadresses.txt", 'r')
-        print(f)
         x = [i[:-1] for i in f]
-        n = 0
+        print(x)
         while True:
             k = privateKey()
             if address(publicKey(k)) in x:
                 print(k)
+                print("CARALHO DEU CERTO")
                 e = open("vouchorar.txt", 'w')
                 e.write(k)
                 e.close()
-            n += 1
-            print(n)
+            
             
 if __name__ == "__main__":
     main()
